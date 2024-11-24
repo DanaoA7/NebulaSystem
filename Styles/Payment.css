@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Contact Information Styles */
+.contact-info {
+    padding-right: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+.booking-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+/* Payment Method Styles */
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.payment-method {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    border-color: #666;
+}
+
+.payment-method input {
+    position: absolute;
+    opacity: 0;
+}
+
+.payment-method img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.payment-method input:checked + img {
+    opacity: 1;
+}
+
+.payment-method input:checked {
+    border-color: #000;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.payment-method{
+   width: 70px;
+}
+.submit-btn {
+    background-color: #000;
+    color: #fff;
+    flex: 1;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+.back-btn {
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.back-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.bg-bill {
+    background-image: url(Resources/billing.jfif);
+    background-size: contain;
+    height: 600px;
+  }
+  
+  .heightOfModal {
+    height: 90%;
+  }
+  
+  .bill {
+    font-size: 35px;
+    color: teal;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: monospace;
+  }
+  
+  .gradient {
+    background-image: linear-gradient(90deg,
+      #c87cda 0%,
+      #c6426e 51%,
+      #130118 100%
+    );
+    background-size: 200% 100%; /* Adjust size for animation */
+    color: transparent;
+    background-position: 0% 0%; /* Initial position */
+    animation: gradient 20s infinite linear; /* Fixed the animation name */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+  .display > div {
+    line-height: 35px;
+    font-size: 20px;
+    color: royalblue;
+  }
+  
+  .Demannavar {
+    font-family: Magneto;
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .sideHeads {
+    font-size: 24px;
+    font-family: forte;
+    color: #c6426e;
+  }
+  
+  .sideData {
+    font-size: 20px;
+    color: teal;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+}

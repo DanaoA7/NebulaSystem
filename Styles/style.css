@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(universesss.gif);
+    
+}
+h1 {
+    margin: 0;
+}
+
+.booking-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.booking-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.booking-form button {
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.booking-form button:hover {
+    background-color: #555;
+}
+
+.Welcome{
+    margin-top: 5%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn-book{
+    margin-top: 3%;
+    padding: 1%;
+    cursor: pointer;
+    width: 500px;
+    background-color: #333;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+.btn-book:hover{
+    color: white;
+    background-color: #555;
+
+}

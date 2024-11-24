@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: #fcfcfc;
+    --text: #333333;
+    --muted-text: #666666;
+    --primary: #c53030;
+    --hr-light: red;
+}
+.dark-mode {
+    --background: #000000;
+    --text: #e2e8f0;
+    --muted-text: #a0aec0;
+    --primary: #f56565;
+    --hr-light: rgb(250, 247, 247);
+    
+    
+}
+body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.mode-toggle svg {
+   
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 5px;
+    color: white;
+  
+}
+.mode-toggle svg:hover{
+    color: red;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+hr{
+    border: none; /* Remove default border */
+    height: 4px; /* Set the height of the line */
+    background-color: rgb(151, 5, 5); /* Set the color of the line */
+    margin: 1rem 0; /* Optional: add some margin for spacing */
+}
+header.scrolled {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo.hero-images{
+    height: 50px;
+    margin-right: auto; /* This makes the image stay to the left */
+    padding-left: 50px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fffefe;
+    position: relative;
+    transition: color 0.3s ease;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #c53030;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+nav ul li a:hover {
+    color: #c53030;
+}
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Description Section */
+.description {
+    padding: 80px 0;
+}
+
+.description p {
+    margin-bottom: 20px;
+}
+
+/* Venues Section */
+.venues {
+    padding: 80px 0;
+}
+
+.venues h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.venue-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.venue {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: fit-content;
+}
+
+.venue-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    width: 100%; /* Adjust based on your needs */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.venue h3 {
+    font-size: 24px;
+    margin: 20px;
+    top: 5%; /* Adjust to control positioning */
+    font-size: 1.5rem;
+    font-weight: bold;
+    left: 20px;
+    font-size: 50px;
+}
+
+.venue h3,
+.venue p {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    width: 90%; /* Adjust to control text wrapping */
+    margin: 0 auto;
+    font-family: 'Times New Roman', serif;
+}
+
+
+.venue p {
+    margin: 0 20px 20px;
+    bottom: 10%; /* Adjust to control positioning */
+    font-size: 1rem;
+    left: 1px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.container1 {
+    justify-content: space-between;
+    display: flex;
+    margin-left: 20px;
+}
+
+.container1 img {
+    border-radius: 85px;
+    flex: 1;
+    max-width: 530px; /* Set maximum width of image */
+    margin-right: 60px;
+}
+.discover{
+    justify-content: space-between;
+    margin-right: 10px;
+    
+}
+
+
+.description1 {
+    width: 50%;
+}
+
+.description1 p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.description1 p:first-child {
+    margin-top: 10%;
+}
+
+.description1 p span {
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+
+.background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white;
+    padding: 80px;
+    border-radius: 8px; /* Rounded corners */
+    width: 50%;
+    font-size: 30px;
+    font-family:'Times New Roman', sans-serif;
+}
+.overlay-text2 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white;
+    padding: 100px;
+    border-radius: 8px; /* Rounded corners */
+    width: 100%;
+}
+.overlay-text2:hover{
+    background-color:rgba(0, 0, 0, 0.8);
+    
+    
+}
+
+@media (max-width: 1024px) {
+    .container1 {
+        flex-direction: column; /* Stack items on tablet/mobile */
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .description1 {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 30px; /* Space between text and image */
+    }
+
+    .container1 img {
+        max-width: 100%; /* Full width image */
+        margin-right: 0; /* Remove right margin */
+        margin-top: 20px; /* Add top margin for spacing */
+    }
+
+    .description1 p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .description1 p span {
+        margin-left: 0; /* Remove left margin from spans */
+    }
+
+    .overlay-text {
+        top: 35%; /* Slightly adjust vertical position */
+        width: 60%; /* Increase width for better use of space */
+        padding: 60px; /* Reduce padding */
+        font-size: 22px; /* Decrease font size */
+    }
+
+    .overlay-text2 {
+        top: 80%; /* Adjust vertical position */
+        padding: 60px; /* Reduce padding */
+        font-size: 22px; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        margin: 0 15px;
+    }
+
+    .description1 p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .description1 p:first-child {
+        margin-top: 20px; /* Reduce top margin on mobile */
+    }
+
+    .container1 img {
+        border-radius: 40px; /* Reduce border radius on mobile */
+    }
+
+    .overlay-text {
+        top: 30%; /* Adjust vertical position */
+        width: 80%; /* Increase width for smaller screens */
+        padding: 40px; /* Reduce padding */
+        font-size: 18px; /* Decrease font size */
+    }
+
+    .overlay-text2 {
+        top: 75%; /* Adjust vertical position */
+        padding: 30px; /* Reduce padding */
+        font-size: 18px; /* Decrease font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        margin: 0 10px;
+    }
+
+    .description1 p {
+        font-size: 13px;
+    }
+
+    .container1 img {
+        border-radius: 30px;
+    }
+}
+
+/* Keep your existing larger screen media query */
+@media (min-width: 1200px) {
+    .container1 {
+        margin-left: 40px;
+    }
+
+    .container1 img {
+        max-width: 530px;
+        margin-right: 60px;
+    }
+
+    .description p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .overlay-text {
+        top: 42%; /* Original vertical position */
+        width: 50%; /* Keep width consistent */
+        padding: 80px; /* Original padding */
+        font-size: 30px; /* Original font size */
+    }
+
+    .overlay-text2 {
+        top: 85%; /* Original vertical position */
+        padding: 100px; /* Original padding */
+        font-size: 30px; /* Original font size */
+    }
+}

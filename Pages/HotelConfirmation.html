@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Hotel Nebula</title>
+    <link rel="stylesheet" href="/Styles/Hotel.css">
+    <link rel="stylesheet" href="/Styles/HotelConfirmation.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        .confirmation-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .confirmation-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .confirmation-details {
+            margin-bottom: 1.5rem;
+        }
+        .confirmation-details h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .back-to-home {
+            display: block;
+            width: 200px;
+            margin: 2rem auto 0;
+            padding: 0.75rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .back-to-home:hover {
+            background-color: #a52020;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <img src="../images/logo-nebula.png" alt="Nebula Hotel Logo" style="height: 50px;">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Pages/Hotel.html">HOTEL</a></li>
+                <li><a href="../Pages/Dining.html">DINING</a></li>
+                <li><a href="../Pages/Event.html">EVENTS</a></li>
+            </ul>
+        </nav>
+        <button class="mode-toggle" aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+        </button>
+    </header>
+    <hr>
+
+    <main>
+        <div class="confirmation-container">
+            <div class="confirmation-header">
+                <h1>Booking Confirmation</h1>
+                <p>Thank you for choosing Hotel Nebula!</p>
+            </div>
+            <div class="confirmation-details">
+                <h2>Booking Details</h2>
+                <div class="detail-item">
+                    <span>Name:</span>
+                    <span id="confirmName"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Email:</span>
+                    <span id="confirmEmail"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Date:</span>
+                    <span id="confirmDate"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Time:</span>
+                    <span id="confirmTime"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Guests:</span>
+                    <span id="confirmGuests"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Room:</span>
+                    <span id="confirmRoom"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Price:</span>
+                    <span id="confirmPrice"></span>
+                </div>
+                <div class="detail-item">
+                    <span>Payment Method:</span>
+                    <span id="confirmPayment"></span>
+                </div>
+            </div>
+            <a href="/index.html" class="back-to-home">Back to Home</a>
+            <button id="confirmButton" class="btn btn-primary">Confirm Booking</button>
+        </div>
+    </main>
+
+    
+    <div id="receiptModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-labelledby="receiptTitle">
+            <h2 id="receiptTitle">Nebula Hotel Booking Receipt</h2>
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                </thead>
+                <tbody id="receiptBody">
+                    <!-- Receipt details will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+            <button id="printButton" class="btn btn-secondary">Print Receipt</button>
+            <button id="closeButton" class="btn btn-secondary">Close</button>
+        </div>
+    </div>
+    <script src="../function/confirmation.js"></script>
+</body>
+</html>

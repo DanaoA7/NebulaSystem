@@ -1,0 +1,129 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333533dc;
+   /* background: url('') no-repeat center center fixed; /* Background image */
+    /*background-size: cover;*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container that holds the form */
+.container {
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(236, 14, 14, 0.842), 0px 0px 15px rgba(112, 247, 2, 0.774), 0px 4px 25px rgba(243, 51, 3, 0.904); /* Simulate a gradient shadow with multiple layers */
+    backdrop-filter: blur(15px); /* Stronger blur for background */
+    width: 100%;
+    max-width: 420px; /* Slightly larger max-width */
+    text-align: center;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2));
+    animation: fadeIn 1s ease-out, graient 8s ease infinite; /* Add gradient animation */
+    background: linear-gradient(45deg, #ff6f61, #6fa3ff, #61c0ff, #ff61a6); /* Initial gradient */
+    background-size: 400% 400%; /* Make the gradient large enough for animation */
+}
+
+/* Add fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Gradient animation */
+@keyframes graient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Title styling */
+h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Label styling */
+label {
+    font-size: 15px;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50; /* Green color on focus */
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    background-color: #33dd9c;
+    color: rgb(247, 239, 239);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #45a049;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.712));
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Subtle downward effect when clicked */
+}
+
+/* Responsive design: Ensure the form is still centered on smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}

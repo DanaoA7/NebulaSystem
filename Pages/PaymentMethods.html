@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+    ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/683b4b40e3.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>Hotel Nebula - Payment</title>
+    <link rel="stylesheet" href="/Styles/Payment.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <h1>Elevate Your Event with Hotel Nebula</h1>
+            <p class="subtitle">Connect effortlessly with us to discuss your event needs and receive a personalized proposal.</p>
+
+            <div class="info-section">
+                <h2>PHONE</h2>
+                <p>(123) 456-7890</p>
+            </div>
+
+            <div class="info-section">
+                <h2>EMAIL</h2>
+                <p>Email: contact@hotelnebula.com</p>
+            </div>
+
+            <div class="info-section">
+                <h2>ADDRESS</h2>
+                <p>Hotel Nebula</p>
+                <p>123 Celestial Avenue,</p>
+                <p>Dreamland District,</p>
+                <p>Cosmic City, 12345, Galaxy</p>
+            </div>
+        </div>
+
+        <!-- Booking Form Section -->
+        <div class="booking-form">
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="date">DATE</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">TIME</label>
+                    <input type="time" id="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">NUMBER OF GUESTS</label>
+                    <input type="number" id="guests" min="1" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">FIRSTNAME</label>
+                        <input type="text" id="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">LASTNAME</label>
+                        <input type="text" id="lastname" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">CONTACT</label>
+                    <input type="tel" id="contact" required>
+                </div>
+                <div class="form-group Days">
+                    <label for="inputEmail4" class="details">No.of Days</label>
+                    <select class="form-control">
+                      <option>Select</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>CHOOSE A PAYMENT METHOD:</label>
+                    <div class="payment-options">
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="gcash">
+                            <img src="/images/gcash-logo.png" alt="GCash">
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="unionbank">
+                            <img src="/images/UB.png" alt="UnionBank">
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="crypto">
+                            <img src="/images/Crypto.png" alt="CryptoWallet">
+                        </label>
+                    </div>
+                </div>
+
+                <button
+                type="button"
+                class="btn btn-info btn-block mt-4 text-bolder pay"
+              >
+                Pay
+              </button> 
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../function/Payment.js"></script>
+</body>
+</html>

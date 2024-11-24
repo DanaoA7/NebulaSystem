@@ -1,0 +1,330 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default (Light Mode) */
+:root {
+    --background: #fcfcfc; /* Light background */
+    --text: #333333; /* Dark text color */
+    --muted-text: #666666; /* Lighter text for muted info */
+    --primary: #c53030; /* Primary red color */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow */
+    --shadow-dark: rgba(255, 255, 255, 0.1); /* Dark shadow */
+    --image-shadow: rgba(8, 8, 8, 0.918); /* Dark image shadow */
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+    --background: #121212; /* Dark background */
+    --text: #e2e8f0; /* Light text color */
+    --muted-text: #a0aec0; /* Muted light gray text */
+    --primary: #f56565; /* Dark red color */
+    --shadow-light: rgba(0, 0, 0, 0.3); /* Stronger dark shadow */
+    --shadow-dark: rgba(0, 0, 0, 0.7); /* Stronger dark shadow */
+    --image-shadow: rgba(248, 241, 241, 0.63); /* Darker image shadow */
+}
+
+/* Body Styling */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+.mode-toggle svg {
+   
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 5px;
+    color: white;
+  
+}
+.mode-toggle svg:hover{
+    color: red;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Header Shadow on Scroll */
+header.scrolled {
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Section Styling (Hotel Background) */
+.HotelBg {
+    background-image: url('../images/HotelBg.png');
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.BgFront {
+    height: 152px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Room Container Styles */
+.room-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: var(--background);
+    box-shadow: 0 0 10px var(--shadow-light);
+}
+
+.room-image {
+    flex: 1;
+    max-width: 480px;
+    padding-left: 10px;
+    filter:drop-shadow(0px 1.5rem 1rem var(--image-shadow));
+    
+}
+
+.room-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18%;
+    display: block;
+
+}
+
+
+.room-details {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.room-info {
+    color: var(--muted-text);
+    margin-bottom: 10px;
+}
+
+.rate-option {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.price-booking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.book-now:hover {
+    background-color: #45a049;
+}
+
+/* Container for right room details and image */
+
+.room-container1 {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: var(--background);
+    box-shadow: 0 0 10px var(--shadow-light);
+}
+
+/* Room image styling */
+.room-image {   
+    flex: 1;
+    max-width: 480px; /* Set maximum width of image */
+    padding-left: 10px;
+    filter: drop-shadow(0px 8px 15px var(--image-shadow));
+}
+
+.room-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Room details styling */
+.room-details1 {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.room-info {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.rate-option1 {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.price-booking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.book-now {
+    background-color: white;
+    color: rgb(136, 123, 123);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    filter: drop-shadow(0px 2px 5px rgba(240, 4, 4, 0.774));
+}
+
+.book-now:hover {
+    background-color: #2b2e2b;
+}
+
+/* Responsive design: Adjust layout for smaller screens */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .room-container {
+        flex-direction: column;
+    }
+
+    .room-container1 {
+        flex-direction: column;
+    }
+
+    .room-image {
+        width: 100%;
+        margin-left: 60px;
+    }
+}
+
+/* For large screens like desktops */
+@media (min-width: 1200px) {
+  
+    .room-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .room-container1 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Room image stays at 50% width */
+    .room-image {
+        width: 50%;
+        margin-left: 20px; 
+    }
+}
+/* For very large screens like wide desktops */
+@media (min-width: 1600px) {
+    .room-container {
+        margin: 40px; /* Add extra margin for very large screens */
+    }
+
+    .room-container1 {
+        margin: 40px; /* Add extra margin */
+    }
+
+    .room-image {
+        width: 50%; /* Keep the image at 50% width */
+    }
+}
+@media (min-width: 768px) {
+    .HotelBg{
+        height: 590px;
+    }
+    .BgFront{
+        height: 280px;
+    }
+
+    
+}
