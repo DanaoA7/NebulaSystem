@@ -115,7 +115,7 @@ nav ul li a:hover::after {
 
 /* Section Styling (Hotel Background) */
 .HotelBg {
-    background-image: url('./images/HotelBg.png');
+    background-image: url('../images/HotelBg.png');
     background-size: cover;
     background-position: center;
     height: 320px;
