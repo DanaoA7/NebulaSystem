@@ -300,7 +300,7 @@ h1 {
     /* Room image stays at 50% width */
     .room-image {
         width: 50%;
-        margin-left: 20px; 
+        margin-left: 10px; 
     }
 }
 /* For very large screens like wide desktops */
