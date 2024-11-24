@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const Nav = this.textContent.trim().toLowerCase();
             switch (Nav) {
                 case 'hotel':
-                    window.location.href = '/Pages/Hotel.html';
+                    window.location.href = '../Pages/Hotel.html';
                     break;
                 case 'dining':
-                    window.location.href = '/Pages/Dining.html'; // Adjust as necessary
+                    window.location.href = '../Pages/Dining.html'; // Adjust as necessary
                     break;     
                 default:
-                    window.location.href = '/Pages/Event.html';  
+                    window.location.href = '../Pages/Event.html';  
                     break;
             }
         });
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Hotel.addEventListener('click', function(e) {
         e.preventDefault();
         // Directly navigate to Hotel.html
-        window.location.href = '/Pages/Hotel.html';
+        window.location.href = '../Pages/Hotel.html';
     });
 
     // Add scroll event listener for header shadow
@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const Dinning = document.querySelector('.dine-content a');
     Dinning.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = '/Pages/Dining.html';
+        window.location.href = '../Pages/Dining.html';
     });
     
     const Event = document.querySelector('.event-content a');
     Event.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = '/Pages/Event.html';
+        window.location.href = '../Pages/Event.html';
     });
 
 
